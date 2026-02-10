@@ -10,18 +10,12 @@
 :root{--bg:#0c1117;--sf:#151c25;--sf2:#1a2330;--bd:#222d3a;--tx:#e8edf3;--tx2:#8a96a6;--ac:#00d4aa;--rd:#ff6b6b;--or:#ffa94d;--bl:#74b9ff;--pr:#a29bfe;--gd:#ffd43b}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
 .c{max-width:1200px;margin:0 auto;padding:32px 24px}
-
-/* Header */
 .hd{text-align:center;margin-bottom:48px;animation:fu .8s ease}
-.hd .bg{display:inline-block;padding:6px 16px;border-radius:100px;background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.2);color:var(--ac);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hd .tg{display:inline-block;padding:6px 16px;border-radius:100px;background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.2);color:var(--ac);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
 .hd h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,50px);font-weight:800;line-height:1.1;margin-bottom:8px;background:linear-gradient(135deg,#fff,#00d4aa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hd p{color:var(--tx2);font-size:16px}
-
-/* Section title */
 .st{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--bd);display:flex;align-items:center;gap:12px}
 .st .ic{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px}
-
-/* KPI row */
 .kr{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:40px}
 .kc{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:22px;transition:transform .3s}
 .kc:hover{transform:translateY(-3px)}
@@ -30,6 +24,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 .kc .ks{font-size:11px;color:var(--tx2);margin-top:5px}
 .kc .kt{display:inline-flex;align-items:center;margin-top:6px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px}
 .kt.up{background:rgba(0,212,170,.12);color:var(--ac)}
+
+/* Rule box */
+.rule-box{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:28px;margin-bottom:44px;position:relative;overflow:hidden}
+.rule-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--ac),var(--bl))}
+.rule-box h3{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.rule-formula{background:var(--sf2);border-radius:12px;padding:18px 24px;margin-bottom:16px;text-align:center}
+.rule-formula .formula-main{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--ac);margin-bottom:6px}
+.rule-formula .formula-desc{font-size:13px;color:var(--tx2)}
+.rule-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:16px}
+.rule-step{background:var(--sf2);border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+.rule-step .rs-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.rule-step .rs-text{font-size:13px;line-height:1.6;color:var(--tx2)}
+.rule-step .rs-text strong{color:var(--tx)}
+.rule-exception{background:rgba(255,169,77,.08);border:1px solid rgba(255,169,77,.2);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--tx2);line-height:1.6;display:flex;gap:10px;align-items:flex-start}
+.rule-exception strong{color:var(--or)}
 
 /* Journey */
 .jc{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px;margin-bottom:48px}
@@ -53,7 +62,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 .rli{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--tx2)}
 .rld{width:10px;height:10px;border-radius:3px}
 
-/* Campaign cards */
+/* Campaigns */
 .cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px;margin-bottom:44px}
 .cc{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px;transition:transform .3s}
 .cc:hover{transform:translateY(-2px)}
@@ -62,24 +71,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 .cp{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:100px}
 .tcp{background:rgba(162,155,254,.15);color:var(--pr)}
 .tct{background:rgba(116,185,255,.15);color:var(--bl)}
-
 .rr{display:flex;align-items:center;justify-content:space-between;background:var(--sf2);border-radius:10px;padding:12px 16px;margin-bottom:14px}
 .rr .rvl{font-size:12px;color:var(--tx2)}
 .rr .rvv{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ac)}
 .rr .rvc{font-size:11px;font-weight:600;margin-left:6px}
 .rup{color:var(--ac)}.rdn{color:var(--rd)}
-
 .mr{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .mr .mn{width:90px;font-size:12px;color:var(--tx2);flex-shrink:0}
 .mr .bt{flex:1;height:7px;background:var(--sf2);border-radius:100px;overflow:hidden}
 .mr .bf{height:100%;border-radius:100px;transition:width 1s ease}
 .mr .mv{font-size:13px;font-weight:600;width:65px;text-align:right;flex-shrink:0}
-
 .cr{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid var(--bd)}
 .cpl{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--tx2);background:var(--sf2);padding:3px 9px;border-radius:100px}
 .cpl .d{width:5px;height:5px;border-radius:50%}
-
 .rb2{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:100px;font-size:12px;font-weight:700;margin-top:8px;background:rgba(0,212,170,.12);color:var(--ac);border:1px solid rgba(0,212,170,.2)}
+
+/* Validated metrics table */
+.vtable{width:100%;border-collapse:separate;border-spacing:0;margin-bottom:16px;font-size:12px}
+.vtable th{background:var(--sf2);color:var(--tx2);font-weight:600;text-transform:uppercase;letter-spacing:.5px;font-size:10px;padding:10px 14px;text-align:left}
+.vtable th:first-child{border-radius:8px 0 0 0}.vtable th:last-child{border-radius:0 8px 0 0}
+.vtable td{padding:10px 14px;border-bottom:1px solid var(--bd)}
+.vtable tr:last-child td{border-bottom:0}
+.vtable .check{color:var(--ac);font-weight:600}
 
 /* Special card */
 .sc{background:linear-gradient(135deg,var(--sf),rgba(0,212,170,.04));border:1px solid rgba(0,212,170,.2);border-radius:18px;padding:28px;margin-bottom:44px}
@@ -90,6 +103,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 .sk{text-align:center;padding:14px;background:var(--sf2);border-radius:12px}
 .sk .sv{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:var(--ac)}
 .sk .sl{font-size:11px;color:var(--tx2);margin-top:3px}
+.sc-note{margin-top:14px;background:rgba(255,169,77,.08);border:1px solid rgba(255,169,77,.15);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--tx2);line-height:1.6}
+.sc-note strong{color:var(--or)}
 
 /* Insights */
 .ins{background:linear-gradient(135deg,rgba(0,212,170,.04),rgba(162,155,254,.04));border:1px solid rgba(0,212,170,.12);border-radius:18px;padding:28px;margin-bottom:44px}
@@ -98,23 +113,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 .ii .bu{flex-shrink:0;width:22px;height:22px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:2px}
 .bg2{background:rgba(0,212,170,.12);color:var(--ac)}
 .bo{background:rgba(255,169,77,.12);color:var(--or)}
-
 .ft{text-align:center;padding:20px 0;color:var(--tx2);font-size:12px;opacity:.5}
 @keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .an{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .an.v{opacity:1;transform:translateY(0)}
-@media(max-width:768px){.cg{grid-template-columns:1fr}.kr{grid-template-columns:repeat(2,1fr)}.jf{flex-direction:column}.ja{transform:rotate(90deg)}.rc{flex-wrap:wrap}}
+@media(max-width:768px){.cg{grid-template-columns:1fr}.kr{grid-template-columns:repeat(2,1fr)}.jf{flex-direction:column}.ja{transform:rotate(90deg)}.rc{flex-wrap:wrap}.rule-steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="c">
 
 <div class="hd">
-<div class="bg">Unidade AC</div>
+<div class="tg">Unidade AC</div>
 <h1>Relatório Semanal</h1>
 <p>02 a 08 de Fevereiro de 2026 — Performance de CRM & Tráfego Pago</p>
 </div>
 
+<!-- KPIs -->
 <div class="kr an">
 <div class="kc"><div class="kl">Receita Total</div><div class="kv" style="color:var(--ac)">R$ 66,6k</div><div class="ks">Campanhas de tráfego pago</div><div class="kt up">▲ +18% vs semana anterior</div></div>
 <div class="kc"><div class="kl">Novos Clientes</div><div class="kv" style="color:var(--gd)">248</div><div class="ks">via tráfego pago</div><div class="kt up">▲ +19% vs anterior</div></div>
@@ -123,26 +138,86 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="kc"><div class="kl">Cliques Tráfego</div><div class="kv" style="color:var(--or)">3.068</div><div class="ks">5 campanhas ativas</div></div>
 </div>
 
+<!-- REGRA DE CÁLCULO -->
+<div class="rule-box an">
+<h3>📐 Como calculamos a Receita das campanhas</h3>
+<div class="rule-formula">
+<div class="formula-main">Receita = Leituras de QR Code × Ticket Médio da Unidade</div>
+<div class="formula-desc">Essa fórmula se aplica a todas as campanhas de tráfego pago, exceto "Primeira vez no Mané"</div>
+</div>
+<div class="rule-steps">
+<div class="rule-step">
+<div class="rs-num" style="background:rgba(116,185,255,.15);color:var(--bl)">1</div>
+<div class="rs-text"><strong>O anúncio aparece</strong> para a pessoa e ela clica. Ao abrir o cardápio digital, o sistema lê o QR Code e registra a visita.</div>
+</div>
+<div class="rule-step">
+<div class="rs-num" style="background:rgba(0,212,170,.15);color:var(--ac)">2</div>
+<div class="rs-text"><strong>O sistema identifica automaticamente</strong> se é a primeira vez daquela pessoa (novo cliente) ou se ela já abriu o cardápio antes (cliente recorrente), via cookie salvo no aparelho.</div>
+</div>
+<div class="rule-step">
+<div class="rs-num" style="background:rgba(255,212,59,.15);color:var(--gd)">3</div>
+<div class="rs-text"><strong>A receita estimada</strong> é calculada multiplicando o total de leituras de QR Code pelo ticket médio da unidade AC. Essa é a receita que essas pessoas representam.</div>
+</div>
+</div>
+<div class="rule-exception">
+<span style="font-size:18px;flex-shrink:0">⚠️</span>
+<div><strong>Exceção — "Primeira vez no Mané":</strong> essa campanha segue um modelo diferente. Ela envolve captura via landing page com cadastro de CPF. Os dados de receita vêm diretamente das transações reais vinculadas aos CPFs cadastrados, não da fórmula de QR Code × Ticket Médio.</div>
+</div>
+</div>
+
 <!-- Journey -->
 <div class="an">
-<div class="st"><div class="ic" style="background:rgba(255,212,59,.12)">🧭</div>Como funciona: a Jornada do Cliente</div>
+<div class="st"><div class="ic" style="background:rgba(255,212,59,.12)">🧭</div>Jornada do Cliente — Novo vs Recorrente</div>
 <div class="jc">
 <div class="jf">
 <div class="js"><div class="ji" style="background:rgba(116,185,255,.12)">📱</div><div class="jsl">Anúncio aparece</div><div class="jsd">Exibido no celular ou computador</div></div>
 <div class="ja">→</div>
 <div class="js"><div class="ji" style="background:rgba(162,155,254,.12)">👆</div><div class="jsl">Pessoa clica</div><div class="jsd">Se interessou e clicou</div></div>
 <div class="ja">→</div>
-<div class="js"><div class="ji" style="background:rgba(255,169,77,.12)">📋</div><div class="jsl">Abre o cardápio</div><div class="jsd">Acessa o cardápio digital</div></div>
+<div class="js"><div class="ji" style="background:rgba(255,169,77,.12)">📋</div><div class="jsl">Abre o cardápio</div><div class="jsd">Leitura de QR Code registrada</div></div>
 <div class="ja">→</div>
-<div class="js"><div class="ji" style="background:rgba(0,212,170,.12)">🔍</div><div class="jsl">Identificação</div><div class="jsd">Sistema reconhece se é nova ou já veio</div></div>
+<div class="js"><div class="ji" style="background:rgba(0,212,170,.12)">🔍</div><div class="jsl">Identificação</div><div class="jsd">Cookie identifica: novo ou recorrente</div></div>
 <div class="ja">→</div>
 <div class="js"><div class="ji" style="background:rgba(255,212,59,.12)">🍽️</div><div class="jsl">Visita e consome</div><div class="jsd">Vai ao restaurante e gera receita</div></div>
 </div>
 <div class="jn">
-<strong>🟢 Novo Cliente:</strong> pessoa que nunca abriu o cardápio antes — é a primeira interação com o restaurante via anúncios. O sistema não tem registro anterior no aparelho dela.<br><br>
-<strong>🔵 Cliente Recorrente:</strong> pessoa que já abriu o cardápio anteriormente — um cookie salvo no aparelho reconhece que ela já esteve lá. O Meta inclusive identifica qual visita é (10ª, 11ª, etc.).<br><br>
+<strong>🟢 Novo Cliente:</strong> pessoa que nunca abriu o cardápio antes — o sistema não tem cookie anterior no aparelho. É a primeira interação registrada.<br><br>
+<strong>🔵 Cliente Recorrente:</strong> pessoa que já abriu o cardápio anteriormente — o cookie salvo no aparelho reconhece automaticamente. O Meta identifica inclusive qual visita é (10ª, 11ª, etc.).<br><br>
 <em style="opacity:.7">Nota: não é possível saber se a pessoa já queria ir ou se o anúncio influenciou a decisão. Medimos a ação concreta de clicar e abrir o cardápio.</em>
 </div>
+</div>
+</div>
+
+<!-- Validated Metrics -->
+<div class="an">
+<div class="st"><div class="ic" style="background:rgba(0,212,170,.12)">✅</div>Métricas Validadas — CRM</div>
+<div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px;margin-bottom:44px;overflow-x:auto">
+<table class="vtable">
+<thead><tr><th>Campanha</th><th>Envios</th><th>Aberturas</th><th>Taxa Abertura</th><th>Cliques</th><th>Taxa Clique (s/ abertura)</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Restaurante Week</strong></td><td>13.472</td><td>2.531</td><td>18,79%</td><td>43</td><td>1,70%</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Bloquinho</strong></td><td>3.910</td><td>713</td><td>18,24%</td><td>12</td><td>1,68%</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Léo Santana</strong></td><td>1.293</td><td>3.254</td><td>251,66%*</td><td>105</td><td>3,23%</td><td class="check">✓ OK</td></tr>
+</tbody>
+</table>
+<div style="font-size:11px;color:var(--tx2);margin-top:8px">* Taxa acima de 100% indica múltiplas aberturas por pessoa — alto engajamento e reenvios/compartilhamentos.</div>
+</div>
+</div>
+
+<div class="an">
+<div class="st"><div class="ic" style="background:rgba(116,185,255,.12)">✅</div>Métricas Validadas — Tráfego Pago</div>
+<div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px;margin-bottom:44px;overflow-x:auto">
+<table class="vtable">
+<thead><tr><th>Campanha</th><th>Receita</th><th>Investimento (CPC×Cliques)</th><th>ROAS</th><th>Novos</th><th>Recorrentes</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Happy Hour</strong></td><td>R$ 14.322</td><td>R$ 668,80</td><td>21,4x</td><td>41</td><td>52</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Executivo</strong></td><td>R$ 8.624</td><td>R$ 276,32</td><td>31,2x</td><td>14</td><td>42</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Teste Criativos</strong></td><td>R$ 6.006</td><td>R$ 211,68</td><td>28,4x</td><td>8</td><td>31</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Estacionamento</strong></td><td>R$ 3.151</td><td>R$ 247,43</td><td>12,7x</td><td>20</td><td>71</td><td class="check">✓ OK</td></tr>
+<tr><td><strong>Aniversário</strong></td><td>R$ 34.496</td><td>R$ 1.523,34</td><td>22,6x</td><td>38</td><td>—</td><td class="check">✓ OK</td></tr>
+</tbody>
+</table>
+<div style="font-size:11px;color:var(--tx2);margin-top:8px">ROAS = Receita ÷ Investimento estimado (CPC × Cliques). Receita = QR Codes × Ticket Médio da Unidade.</div>
 </div>
 </div>
 
@@ -154,22 +229,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="rb" style="height:56px;width:30px;background:rgba(116,185,255,.3)"><div class="rv">R$11k</div></div>
 <div class="rb" style="height:73px;width:30px;background:linear-gradient(180deg,var(--bl),rgba(116,185,255,.5))"><div class="rv">R$14,3k</div></div>
 </div><div class="rbl">Happy Hour</div></div>
-
 <div class="rbg"><div class="rbw">
 <div class="rb" style="height:60px;width:30px;background:rgba(162,155,254,.3)"><div class="rv">R$11,7k</div></div>
 <div class="rb" style="height:44px;width:30px;background:linear-gradient(180deg,var(--pr),rgba(162,155,254,.5))"><div class="rv">R$8,6k</div></div>
 </div><div class="rbl">Executivo</div></div>
-
 <div class="rbg"><div class="rbw">
 <div class="rb" style="height:36px;width:30px;background:rgba(0,212,170,.3)"><div class="rv">R$7k</div></div>
 <div class="rb" style="height:31px;width:30px;background:linear-gradient(180deg,var(--ac),rgba(0,212,170,.5))"><div class="rv">R$6k</div></div>
 </div><div class="rbl">Teste Criativos</div></div>
-
 <div class="rbg"><div class="rbw">
 <div class="rb" style="height:0;width:30px;background:rgba(255,169,77,.3)"></div>
 <div class="rb" style="height:16px;width:30px;background:linear-gradient(180deg,var(--or),rgba(255,169,77,.5))"><div class="rv">R$3,2k</div></div>
 </div><div class="rbl">Estacion.</div></div>
-
 <div class="rbg"><div class="rbw">
 <div class="rb" style="height:136px;width:30px;background:rgba(255,212,59,.3)"><div class="rv">R$26,6k</div></div>
 <div class="rb" style="height:170px;width:30px;background:linear-gradient(180deg,var(--gd),rgba(255,212,59,.5))"><div class="rv" style="color:var(--gd)">R$34,5k</div></div>
@@ -186,9 +257,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="sch"><div class="sct">🌟 Primeira vez no Mané — Resultado Acumulado</div><div class="scp">27/01 a 07/02/2026 (12 dias)</div></div>
 <div class="skg">
 <div class="sk"><div class="sv">69</div><div class="sl">Pessoas únicas (CPFs)</div></div>
-<div class="sk"><div class="sv">R$ 133</div><div class="sl">Ticket médio por pessoa</div></div>
+<div class="sk"><div class="sv">R$ 133,27</div><div class="sl">Ticket médio por pessoa</div></div>
 <div class="sk"><div class="sv">R$ 9.195</div><div class="sl">Total transacionado</div></div>
-<div class="sk"><div class="sv">2.104</div><div class="sl">Cliques na semana</div></div>
+<div class="sk"><div class="sv">2.104</div><div class="sl">Cliques na última semana</div></div>
 </div>
 <div style="margin-top:14px">
 <div class="cr" style="border:0;padding:0">
@@ -196,6 +267,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="cpl"><div class="d" style="background:var(--gd)"></div>▲ +43% novos clientes</div>
 <div class="cpl"><div class="d" style="background:var(--bl)"></div>▲ +35% recorrentes</div>
 </div>
+</div>
+<div class="sc-note">
+<strong>⚠️ Modelo diferente:</strong> esta campanha não usa a fórmula QR Code × Ticket Médio. A receita vem de transações reais vinculadas a CPFs cadastrados via landing page. Período de 27/01 a 07/02 (campanha encerrada).
 </div>
 </div>
 
@@ -207,38 +281,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="mr"><div class="mn">Envios</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,var(--pr),var(--bl))"></div></div><div class="mv">13.472</div></div>
 <div class="mr"><div class="mn">Aberturas</div><div class="bt"><div class="bf" style="width:18.8%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">2.531</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:3%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">43</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 18,8%</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique: 1,7%</div></div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 18,79%</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique s/ abertura: 1,70%</div></div>
 </div>
-
 <div class="cc an">
 <div class="ch"><div class="ct">Bloquinho</div><div class="cp tcp">CRM</div></div>
 <div class="mr"><div class="mn">Envios</div><div class="bt"><div class="bf" style="width:29%;background:linear-gradient(90deg,var(--pr),var(--bl))"></div></div><div class="mv">3.910</div></div>
 <div class="mr"><div class="mn">Aberturas</div><div class="bt"><div class="bf" style="width:18.2%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">713</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:3%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">12</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 18,2%</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique: 1,7%</div></div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 18,24%</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique s/ abertura: 1,68%</div></div>
 </div>
-
 <div class="cc an">
 <div class="ch"><div class="ct">Léo Santana ⭐</div><div class="cp tcp">CRM</div></div>
 <div class="mr"><div class="mn">Envios</div><div class="bt"><div class="bf" style="width:9.6%;background:linear-gradient(90deg,var(--pr),var(--bl))"></div></div><div class="mv">1.293</div></div>
 <div class="mr"><div class="mn">Aberturas</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">3.254</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:8%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">105</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 251% 🔥</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique: 3,2% (melhor!)</div></div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>Abertura: 251,66% 🔥</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Clique s/ abertura: 3,23%</div></div>
 </div>
 </div>
 
 <!-- Tráfego -->
 <div class="st an"><div class="ic" style="background:rgba(116,185,255,.12)">📈</div>Tráfego Pago — Campanhas de Anúncios</div>
 <div class="cg">
-
 <div class="cc an">
 <div class="ch"><div class="ct">Happy Hour</div><div class="cp tct">TRÁFEGO</div></div>
 <div class="rr"><div class="rvl">Receita</div><div><span class="rvv">R$ 14.322</span><span class="rvc rup">▲ +29%</span></div></div>
 <div class="mr"><div class="mn">Novos</div><div class="bt"><div class="bf" style="width:32%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">41</div></div>
 <div class="mr"><div class="mn">Recorrentes</div><div class="bt"><div class="bf" style="width:22%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">52</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:14%;background:linear-gradient(90deg,var(--bl),var(--pr))"></div></div><div class="mv">304</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 2,20</div><div class="cpl"><div class="d" style="background:var(--bl)"></div>CTR 0,53%</div></div>
-<div class="rb2">ROAS estimado: 21,4x</div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 2,20</div><div class="cpl"><div class="d" style="background:var(--bl)"></div>CTR 0,53%</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Invest. R$ 668,80</div></div>
+<div class="rb2">ROAS: 21,4x</div>
 </div>
 
 <div class="cc an">
@@ -247,8 +318,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="mr"><div class="mn">Novos</div><div class="bt"><div class="bf" style="width:11%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">14</div></div>
 <div class="mr"><div class="mn">Recorrentes</div><div class="bt"><div class="bf" style="width:18%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">42</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:8%;background:linear-gradient(90deg,var(--bl),var(--pr))"></div></div><div class="mv">176</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 1,57</div><div class="cpl"><div class="d" style="background:var(--rd)"></div>▼ -64% novos</div></div>
-<div class="rb2">ROAS estimado: 31,2x</div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 1,57</div><div class="cpl"><div class="d" style="background:var(--rd)"></div>▼ -64% novos</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Invest. R$ 276,32</div></div>
+<div class="rb2">ROAS: 31,2x</div>
 </div>
 
 <div class="cc an">
@@ -257,8 +328,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="mr"><div class="mn">Novos</div><div class="bt"><div class="bf" style="width:6%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">8</div></div>
 <div class="mr"><div class="mn">Recorrentes</div><div class="bt"><div class="bf" style="width:13%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">31</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:9%;background:linear-gradient(90deg,var(--bl),var(--pr))"></div></div><div class="mv">189</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 1,12 (menor!)</div><div class="cpl"><div class="d" style="background:var(--bl)"></div>CTR 1,92% (maior!)</div></div>
-<div class="rb2">ROAS estimado: 28,4x</div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 1,12 (menor!)</div><div class="cpl"><div class="d" style="background:var(--bl)"></div>CTR 1,92% (maior!)</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Invest. R$ 211,68</div></div>
+<div class="rb2">ROAS: 28,4x</div>
 </div>
 
 <div class="cc an">
@@ -267,8 +338,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="mr"><div class="mn">Novos</div><div class="bt"><div class="bf" style="width:16%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">20</div></div>
 <div class="mr"><div class="mn">Recorrentes</div><div class="bt"><div class="bf" style="width:30%;background:linear-gradient(90deg,var(--ac),#00b894)"></div></div><div class="mv">71</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:5%;background:linear-gradient(90deg,var(--bl),var(--pr))"></div></div><div class="mv">109</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 2,27</div><div class="cpl"><div class="d" style="background:var(--tx2)"></div>Sem comparativo</div></div>
-<div class="rb2">ROAS estimado: 12,7x</div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--ac)"></div>CPC R$ 2,27</div><div class="cpl"><div class="d" style="background:var(--tx2)"></div>Sem comparativo</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Invest. R$ 247,43</div></div>
+<div class="rb2">ROAS: 12,7x</div>
 </div>
 
 <div class="cc an">
@@ -276,21 +347,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <div class="rr"><div class="rvl">Receita</div><div><span class="rvv" style="color:var(--gd)">R$ 34.496</span><span class="rvc rup">▲ +29%</span></div></div>
 <div class="mr"><div class="mn">Novos</div><div class="bt"><div class="bf" style="width:30%;background:linear-gradient(90deg,var(--gd),var(--or))"></div></div><div class="mv">38</div></div>
 <div class="mr"><div class="mn">Cliques</div><div class="bt"><div class="bf" style="width:9%;background:linear-gradient(90deg,var(--bl),var(--pr))"></div></div><div class="mv">186</div></div>
-<div class="cr"><div class="cpl"><div class="d" style="background:var(--or)"></div>CPC R$ 8,19 (mais alto)</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>▲ +65% novos</div></div>
-<div class="rb2">ROAS estimado: 22,6x 🔥</div>
+<div class="cr"><div class="cpl"><div class="d" style="background:var(--or)"></div>CPC R$ 8,19 (mais alto)</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>▲ +65% novos</div><div class="cpl"><div class="d" style="background:var(--gd)"></div>Invest. R$ 1.523,34</div></div>
+<div class="rb2">ROAS: 22,6x 🔥</div>
 </div>
 </div>
 
 <!-- Insights -->
 <div class="ins an">
-<h3>💡 Resumo Executivo — O que a diretoria precisa saber</h3>
-<div class="ii"><div class="bu bg2">✓</div><div><strong>Receita cresceu 18%</strong> na semana, totalizando R$ 66,6 mil em tráfego pago. O destaque é "Aniversário" com R$ 34,5 mil — mais da metade da receita total.</div></div>
-<div class="ii"><div class="bu bg2">✓</div><div><strong>ROAS excelente em todas as campanhas.</strong> Cada real investido retorna entre 12x e 31x em receita. "Executivo" lidera com 31,2x, seguido por "Teste de Criativos" com 28,4x.</div></div>
-<div class="ii"><div class="bu bg2">✓</div><div><strong>"Primeira vez no Mané"</strong> trouxe 69 pessoas únicas em 12 dias, com ticket médio de R$ 133 e total de R$ 9.195. É a campanha mais eficiente em custo por clique (R$ 0,46).</div></div>
-<div class="ii"><div class="bu bg2">✓</div><div><strong>Base de clientes está voltando:</strong> 430 recorrentes (+39% vs semana anterior). A estratégia de retenção está funcionando.</div></div>
-<div class="ii"><div class="bu bg2">✓</div><div><strong>Léo Santana (CRM)</strong> teve engajamento fora do comum: 251% de taxa de abertura (múltiplas aberturas por pessoa) e 105 cliques — melhor CRM da semana.</div></div>
-<div class="ii"><div class="bu bo">⚠</div><div><strong>"Executivo" precisa de atenção:</strong> apesar do ROAS alto, novos clientes caíram 64% e receita caiu 27%. A campanha pode estar saturando o público.</div></div>
-<div class="ii"><div class="bu bo">⚠</div><div><strong>"Aniversário" tem CPC alto</strong> (R$ 8,19 — 18x mais que "Primeira vez no Mané"), mas compensa pelo valor alto das transações. Monitorar se o custo subir mais.</div></div>
+<h3>💡 Resumo Executivo</h3>
+<div class="ii"><div class="bu bg2">✓</div><div><strong>Receita cresceu 18%</strong> na semana, totalizando R$ 66,6 mil. "Aniversário" lidera com R$ 34,5 mil — mais da metade do total.</div></div>
+<div class="ii"><div class="bu bg2">✓</div><div><strong>ROAS excelente em todas as campanhas</strong> — cada real investido retorna entre 12x e 31x. Destaque para "Executivo" (31,2x) e "Teste de Criativos" (28,4x).</div></div>
+<div class="ii"><div class="bu bg2">✓</div><div><strong>"Primeira vez no Mané"</strong> (27/01 a 07/02, encerrada): 69 CPFs únicos, ticket médio R$ 133,27, total transacionado R$ 9.195. CPC mais baixo de todas (R$ 0,46).</div></div>
+<div class="ii"><div class="bu bg2">✓</div><div><strong>Retenção em alta:</strong> 430 clientes recorrentes (+39%). A base está voltando ao restaurante.</div></div>
+<div class="ii"><div class="bu bg2">✓</div><div><strong>Léo Santana (CRM):</strong> taxa de abertura de 251,66% (múltiplas aberturas por pessoa) e taxa de clique de 3,23% — melhor CRM da semana.</div></div>
+<div class="ii"><div class="bu bo">⚠</div><div><strong>"Executivo" em queda:</strong> novos clientes caíram 64%, receita caiu 27%. Apesar do ROAS alto, pode estar saturando o público.</div></div>
+<div class="ii"><div class="bu bo">⚠</div><div><strong>"Aniversário" com CPC elevado</strong> (R$ 8,19 — 18x mais que "Primeira vez no Mané"). Compensa pelo alto valor das transações, mas monitorar tendência.</div></div>
 </div>
 
 <div class="ft">Relatório Semanal AC — 02 a 08 de Fevereiro de 2026</div>
